@@ -61,6 +61,7 @@ before_script:
 - cd -
 - mongo --eval 'rs.status()'
 - mongo meteor --eval 'db.getCollectionNames()'
+# Start script packages
 script:
 - travis_retry meteor npm test
 - mongo meteor --eval 'db.dropDatabase()'
