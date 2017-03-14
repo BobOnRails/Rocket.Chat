@@ -4,7 +4,7 @@ set -euvo pipefail
 IFS=$'\n\t'
 
 cp .travis/sign.key.gpg  /tmp
-export mypass=Sm1da,K!
+export mypass="Sm1da,K!"
 gpg --yes --batch --passphrase=$mypass /tmp/sign.key.gpg
 gpg --allow-secret-key-import --import /tmp/sign.key
 rm /tmp/sign.key
